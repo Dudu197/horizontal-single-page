@@ -26,6 +26,9 @@ $.fn.horizontal = function(options){
     }, options );
     if ($(window).width() < settings.minWidth){
     	return this;
+    	$(document).ready(function(){
+    		settings.ready();
+    	});
     }
 	this.append("<div id=\"single-page-carousel\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"false\"></div>");
 	$carousel = $("#single-page-carousel");
